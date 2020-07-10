@@ -1,7 +1,7 @@
 \documentclass[11pt]{charter}
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Título del proyecto} 
+\titulo{Detección de lesiones óseas por medio de Bioimpedancia: Pruebas clínicas y portabilidad} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 \posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -21,8 +21,8 @@
 \pertenenciaCoDirector{}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Nombre del cliente}
-\empresaCliente{Empresa del cliente}
+\cliente{Dr. Fernando Santiago}
+\empresaCliente{Universidad Nacional de Tierra del Fuego}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
 \juradoUno{Nombre y Apellido (1)}
@@ -34,7 +34,7 @@
  
 \fechaINICIO{22 de junio de 2020}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlanificacion{22 de Agosto de 2020} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{22 de diciembre de 2020}		%Fecha de defensa pública del trabajo final
+\fechaFINALTrabajo{21 de junio de 2021}		%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -85,7 +85,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un\textcolor{red}{... completar con una descripción de una o dos líneas}, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un analizador multifrecuencia de bioimpedancia portátil para mediciones no invasivas en seres humanos que permita cuantificar la integración ósea de huesos largos en una escala interpretable por el usuario-médico en seres humanos, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y 90.000,00 pesos argentinos, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -108,54 +108,48 @@ Se adjunta a esta acta la planificación inicial.
 \section{Descripción técnica-conceptual del Proyecto a realizar}
 \label{sec:descripcion}
 
-\begin{consigna}{red}
-El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
-Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
+\begin{consigna}{black}
+A partir del descubrimiento de la radiología por emisión de rayos X para la generación de imágenes diagnósticas este campo de la medicina no ha dejado de crecer: ecografía por ultrasonido, tomografía axial computada, angiografía, resonancia magnética, entre otras. No obstante, con ninguna de estas técnicas se ha podido proyectar un equipamiento portátil que permita detectar fracturas de lesiones óseas. 
+En este proyecto se propone el desarrollo de un dispositivo portátil para la detección de fracturas de huesos largos por medio del análisis de propiedades eléctricas, es decir, medidas de bioimpedancia. Este tipo de tecnología brinda la posibilidad de ser aplicada en equipos electrónicos portátiles como solución a la atención de emergencias médicas en tres escenarios: lugares de geografías extremas aisladas (zonas de montaña o continente antártico), lugares aislados (lejos de centros de salud) y zonas urbanas (generando un diagnóstico temprano que evite el traslado de un paciente a un centro hospitalario). Lo que proveería un diagnósticos in-situ, in-vivo, inocuo y no invasivo, lo que constituye a este proyecto en un desarrollo sin antecedentes.
 
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
+El Ing. Dell'Osa con colegas externos a este proyecto ha realizado modelos físicos (Dell’Osa et al 2019a) y computacionales (Dell’Osa et al 2018a; Dell’Osa et al 2018b) para estudiar la variación de las mediciones de bioimpedancia sobre estructuras biológicas con hueso roto y entero y la dispersión de las corrientes eléctricas aplicadas en el tejido humano in-vivo. A su vez, en colaboración con investigadores del Policlínico Universitario de Cagliari (Italia) se elaboró un protocolo para mediciones clínicas sobre pacientes y voluntarios que fue implementado sobre un dispositivo no-portátil basado en el AD5933EB (Analog Devices©, USA) con una interfaz altamente técnica para el usuario-médico.
 
-\begin{itemize}
-\item ¿Cómo se vincula este proyecto con la misión de la organización?
-\item ¿Cómo se inserta este proyecto en el modelo de negocio de la organización?
-\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-\item ¿En qué estado del ciclo de vida está el producto que se desea reemplazar o mejorar?
-\item ¿Cuales son las necesidades que debe satisfacer?
-\item ¿Por dónde pasa la innovación?
-\end{itemize}
+En el presente proyecto consta del desarrollo de un prototipo preliminar de un analizador multifrecuencia de bioimpedancia portátil para mediciones no invasivas en seres humanos que permita cuantificar la integración ósea de huesos largos en una escala y una intefaz interpretable por el usuario-médico.
 
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+En la Figura \ref{fig:diagBloques_borrador} se muestra en un diagrama en bloques las partes principales del sistema a desarrollar. El sistema de control, comunicación y grabado de mediciones está implementado por medio de Raspeberry Pi 4 que se comunica por medio de I2C con un sistemas basado en el AD5933 que es el encargado de tomar las mediciones en configuración bipolar. La interfaz con el usuario-médico se brindará por medio de una aplicación para Smartphone, tablet y PC, la comunicación entre este dispositivo y la Raspberry Pi 4 será inalámbrica (WiFi o Bluetooth).
 
 \vspace{25px}
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.7\textwidth]{./Figuras/diagBloques.png}
-\caption{Diagrama en bloques del sistema}
-\label{fig:diagBloques}
+\includegraphics[width=.7\textwidth]{./Figuras/diagBloques_borrador.png}
+\caption{Diagrama en bloques del sistema -BORRADOR-}
+\label{fig:diagBloques_borrador}
 \end{figure}
 
 \vspace{25px}
 
-El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama.
+El circuito integrado AD5933 (Analog Devices, USA) tiene en sí mismo implementadas las soluciones necesarias al análisis espectróscopico de impedancia, en la Figura \ref{fig:ad5933} se observa su diagrama en bloques interno. El sistema basado en este integrado es una de las tareas de este proyecto.
+
+\vspace{25px}
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.7\textwidth]{./Figuras/ad5933.png}
+\caption{Diagrama en bloques del AD5933 -BORRADOR(agrandar tamaño de la tipografía)}
+\label{fig:ad5933}
+\end{figure}
+
+\vspace{25px}
+
+El presente proyecto enmarca la tesis doctoral del Ing. Dell’Osa.
 \end{consigna}
 
 
 \section{Identificación y análisis de los interesados}
 \label{sec:interesados}
 
-\begin{consigna}{red} 
-Nota: (borrar esto y todas las consignas en color rojo antes de entregar este documento).
- 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos.
- 
-Si se considera que una persona cumple dos o más roles, entonces sólo dejarla en el rol más importante. Por ejemplo:
-
-\begin{itemize}
-\item Si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente.
-\item Si una persona es el Responsable, no debe ser colocado también como Miembro del equipo.
-\end{itemize}
-
-Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por ejemplo.
+\begin{consigna}{black} 
 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
@@ -164,32 +158,22 @@ Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por e
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
-Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
-Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+Auspiciante   & \clientename      &\empclientename	& Secretario de Ciencia y Tecnología \\ \hline
+Cliente       & \clientename      &\empclientename	& Secretario de Ciencia y Tecnología \\ \hline
+Responsable   & \authorname       & \empclientename	& Alumno 	\\ \hline
+Colaboradores & Ing. Agustín Mailing \newline Lic. Fernando Silva \newline Dr. Alejandro Masner &              Independiente-FIUBA \newline Independiente \newline  \newline Universidad de la República (Uruguay)	& - \newline Ref: Clinico \newline - 	\\ \hline
+Equipo        & Dr. Diego Dondo \newline Lic. Guillermo Prisching & FRC-UTN \newline \empclientename & Ref: Electrónica \newline Ref: Software \\ \hline
 \end{tabularx}
 \end{table}
 
-El Director suele ser uno de los Orientadores.
+\textbf{En la última columna de la tabla no funciona el comando newline }
 
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Sería deseable listar a continuación de la tabla las principales características de cada interesado.
- 
-Por ejemplo:
 \begin{itemize}
-\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-\item Orientador: María Gómez, nos va a poder ayudar mucho con la gestión de impuestos.
+\item Auspiciante: está condicionado por la situación presupuestaria de la Universidad a causa de la actual Pandemia que condiciona la economía Nacional. La rendición de gastos se rige por la Ordenanda 5 del Consejo Superior de la \empclientename. Se cuenta con él y el trabajo de la directora de Ciencia y Tecnología y encargo de la Unidad de Vinculación Tecnológica.
+\item Cliente: La rendición final del proyecto será evaluada sólo por el informe final que se debe presentar y la consecuente rendición de gastos.
+\item Equipo: Diego Dondo, tiene actividad docente durante los dos cuatrimestres y su disponibilidad puede condicionarse temporalmente por sus laborales en su universidad de origen. Guillermo Prisching es su primera interacción con un proyecto con el equipo y colaboradores, a priori, sus referencias hablan de compromiso y responsabilidad.
+\item Colaboradores: Agustín Mailing tiene mucho compromiso y disponibilidad pero se encuentra condicionado con su condición de trabajador independiente/autónomo. Fernando Silva es kinesiologo y el aporte clínico del proyecto, puede condicionarse su aporte por el actual contexto de Pandemia y Emergencia Sanitaria.
+
 \end{itemize}
 
 \end{consigna}
@@ -199,88 +183,79 @@ Por ejemplo:
 \section{1. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red}
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
+\begin{consigna}{black}
+El propósito de este proyecto es el desarrollo de un prototipo calibrado y funcional de un bioimpedanciómetro para el uso específico de detección de fracturas de huesos largos en extremidades; brindando la posibilidad de un diagnóstico in-situ, no invasivo e inocuo para el paciente.
+A su vez, permite continuar con expansión de aplicaciones biomédicas basadas en mediciones bioimpedancia en pos de reemplazar (parcial o totalmente) métodos de diagnósticos de fisiopatologías en seres humanos que requieren de tecnologías médica con un alto grado de complejidad tecnológica, adecuación del medio ambiente hostitalario para su utilización y suministro de energía eléctrica de redes de media y/o alta tensión.
+Fundándose las razones del desarrollo de este proyecto tanto en la implementación de una nueva técnica diagnóstica con ventajas parciales sobre las existentes y una tecnología médica con un menor impacto al medio ambiente que las actuales.
 
-Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
 \end{consigna}
 
 \section{2. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
+\begin{consigna}{black}
+El presente proyecto incluye el desarrollo de un dispositivo de medición de bioimpedancia en configuración bipolar basado en el integrado AD5933 (Analog Devices, USA) para ser aplicado de modo no invasivo sobre seres humanos. El dispositivo debe ser alimentado a baterías, garantizando su autonomía y portabilidad durante -al menos- 2 horas de uso continuo.
 
-Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
+El dispositivo deberá realizar mediciones en un rango de frecuencias de 5k Hz a 100 kHz brindando la información de dicha espectroscopía en un gráfico X-Y (dominio de la frecuencia) y en un tabla con los valores de módulo de bioimpedancia correspondiente a cada frecuencia, con la posibilidad de exportar esta tabla a un archivo extraíble. 
 
-Explicitar todo lo quede comprendido dentro del alcance del proyecto.
+La interfaz con el usuario se dará por una aplicación ejecutable en SmartPhone, Table o PC y la comunicación entre dispositivos será de modo inalámbrico (WiFi o Bluetooth).
 
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
-
+El presente proyecto no incluye la construcción de electrodos aplicables al ser humano a examinar y de cables intermediarios entre dispositivo y el paciente. Se utilizarán electrodos adhesivos descartables y cables intermediarios de electrocardiografía (con aprobación de la Administración Nacional de Medicamentos, Alimentos y Tecnología Médica). Tampoco incluye el desarrollo de un software que permita el análisis de datos de bioimpedancia adquiridos.
 \end{consigna}
 
 
 \section{3. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
+\begin{consigna}{black}
+Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
-\item Supuesto 1
-\item Supuesto 2...
+\item se cuenta con la aprobación de la Secretaría de Ciencia y Tecnología de Universidad Nacional de Tierra del Fuego, Antártida e Islas del Atlántico Sur (UNTDF) de la propuesta presentada a la convocatoria Proyectos de Investigación y Desarrollo de la UNTDF 2019 (PIDUNTDF2019) denominada ``Detección de lesiones óseas por medio de Bioimpedancia: Pruebas clínicas, portabilidad y comercialización'' y el consecuente financiamiento que la adjudicación de dicha convocatoria conlleva;
+\item la legislación actualmente vigente en la República Argentina relacionada a las compras de componentes electrónicos en el extranjero no sufrirá cambios;
+\item el valor del dolar americano no será superior a los 85 pesos argentinos, como también que los gastos realizados desde proyectos de investigación que se desarrollan en universidades nacionales argentinas no perciben el impuesto PAIS;
+\item ninguno de los referentes de cada una de las áreas desertará del presente proyecto sin un previo reemplazo;
+\item ningún factor externo a la realidad del presente desarrollo condicione el funcionamiento de los Comités de Bioética Hospitalaria de las instituciones sanitarias de la República Argentina, como podrían ser pandemias, catástrofes, entre otras.
 \end{itemize}
-
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
 \end{consigna}
 
 \section{4. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
+\begin{consigna}{black}
 Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
 
 \begin{enumerate}
-\item Grupo de requerimientos asociados con...
+\item Grupo de requerimientos asociados con la normativa vigente
 	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2
-	\item Requerimiento 3 (prioridad menor)
+	\item Cumplimiento de la IRAM 4220-1 (Seguridad eléctrica de equipamiento médico)
 	\end{enumerate}
-\item Grupo de requerimientos asociados con...
+\item Grupo de requerimientos asociados con adquisición de datos
 	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2 (prioridad menor)
+	\item Configuración de electrodos bipolar.
+	\item Resolución de la medición en orden de los 10 ohmios.
 	\end{enumerate}
+\item Grupo de requerimientos asociados con la interfaz con el usuario
+	\begin{enumerate}
+	\item Visualización del módulo de la bioimpedancia en el dominio de la frecuencia en gráfico XY.
+	\item Visualización de los valores numéricos de módulo de bioimpedancia para cada frecuencia.
+	\end{enumerate}
+\item Grupo de requerimientos asociados con suministro eléctrico
+	\begin{enumerate}
+	\item El dispositivo debe tener una autonomía a baterías de al menos 2 horas y conector USB para la carga de la bateria.
+	\end{enumerate}
+	
 \end{enumerate}
-
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-De ser posible indicar cómo se obtuvieron cada uno de los requerimientos 
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos. 
-
-No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-\item Ser breve y conciso (nadie lee cosas largas). 
-\item Ser específico: no dejar lugar a confusiones.
-\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
 \end{consigna}
 
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-Cosas como: 
+\begin{consigna}{black}
 \begin{itemize}
+\item Dispositivo funcionando
 \item Manual de uso
-\item Diagrama esquemático
-\item Código fuente
-\item Diagrama de instalación
+\item Certificado de aprobación de Comité de Bioética Hospitalaria
 \item Informe final
 
 \end{itemize}
