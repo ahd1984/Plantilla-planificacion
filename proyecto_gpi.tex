@@ -1,7 +1,7 @@
 \documentclass[11pt]{charter}
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Detección de lesiones óseas por medio de Bioimpedancia: Pruebas clínicas y portabilidad} 
+\titulo{Detección de lesiones óseas por medio de bioimpedancia: pruebas clínicas y portabilidad} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 \posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -110,39 +110,28 @@ Se adjunta a esta acta la planificación inicial.
 
 \begin{consigna}{black}
 A partir del descubrimiento de la radiología por emisión de rayos X para la generación de imágenes diagnósticas este campo de la medicina no ha dejado de crecer: ecografía por ultrasonido, tomografía axial computada, angiografía, resonancia magnética, entre otras. No obstante, con ninguna de estas técnicas se ha podido proyectar un equipamiento portátil que permita detectar fracturas de lesiones óseas. 
-En este proyecto se propone el desarrollo de un dispositivo portátil para la detección de fracturas de huesos largos por medio del análisis de propiedades eléctricas, es decir, medidas de bioimpedancia. Este tipo de tecnología brinda la posibilidad de ser aplicada en equipos electrónicos portátiles como solución a la atención de emergencias médicas en tres escenarios: lugares de geografías extremas aisladas (zonas de montaña o continente antártico), lugares aislados (lejos de centros de salud) y zonas urbanas (generando un diagnóstico temprano que evite el traslado de un paciente a un centro hospitalario). Lo que proveería un diagnósticos in-situ, in-vivo, inocuo y no invasivo, lo que constituye a este proyecto en un desarrollo sin antecedentes.
+En este proyecto se propone el desarrollo de un dispositivo portátil para la detección de fracturas de huesos largos por medio del análisis de propiedades eléctricas, es decir, medidas de bioimpedancia. Este tipo de tecnología brinda la posibilidad de ser aplicada en equipos electrónicos portátiles como solución a la atención de emergencias médicas en tres escenarios: lugares de geografías extremas aisladas (zonas de montaña o continente antártico), lugares aislados (lejos de centros de salud) y zonas urbanas (generando un diagnóstico temprano que evite el traslado de un paciente a un centro hospitalario). Esto proveería diagnósticos in-situ, in-vivo, inocuos y no invasivos, lo que constituye a este proyecto en un desarrollo sin antecedentes a nivel mundial.
 
-El Ing. Dell'Osa con colegas externos a este proyecto ha realizado modelos físicos (Dell’Osa et al 2019a) y computacionales (Dell’Osa et al 2018a; Dell’Osa et al 2018b) para estudiar la variación de las mediciones de bioimpedancia sobre estructuras biológicas con hueso roto y entero y la dispersión de las corrientes eléctricas aplicadas en el tejido humano in-vivo. A su vez, en colaboración con investigadores del Policlínico Universitario de Cagliari (Italia) se elaboró un protocolo para mediciones clínicas sobre pacientes y voluntarios que fue implementado sobre un dispositivo no-portátil basado en el AD5933EB (Analog Devices©, USA) con una interfaz altamente técnica para el usuario-médico.
+El Ing. Dell'Osa con colegas externos a este proyecto ha realizado modelos físicos y computacionales para estudiar la variación de las mediciones de bioimpedancia sobre estructuras biológicas con hueso roto y entero y la dispersión de las corrientes eléctricas aplicadas en el tejido humano in-vivo. A su vez, en colaboración con investigadores del Policlínico Universitario de Cagliari (Italia) se elaboró un protocolo para mediciones clínicas sobre pacientes y voluntarios que fue implementado sobre un dispositivo no-portátil basado en el AD5933EB (Analog Devices©, USA) con una interfaz altamente técnica para el usuario-médico.
 
 En el presente proyecto consta del desarrollo de un prototipo preliminar de un analizador multifrecuencia de bioimpedancia portátil para mediciones no invasivas en seres humanos que permita cuantificar la integración ósea de huesos largos en una escala y una intefaz interpretable por el usuario-médico.
 
 En la Figura \ref{fig:diagBloques_borrador} se muestra en un diagrama en bloques las partes principales del sistema a desarrollar. El sistema de control, comunicación y grabado de mediciones está implementado por medio de Raspeberry Pi 4 que se comunica por medio de I2C con un sistemas basado en el AD5933 que es el encargado de tomar las mediciones en configuración bipolar. La interfaz con el usuario-médico se brindará por medio de una aplicación para Smartphone, tablet y PC, la comunicación entre este dispositivo y la Raspberry Pi 4 será inalámbrica (WiFi o Bluetooth).
 
+El circuito integrado AD5933 (Analog Devices, USA) tiene en sí mismo implementadas las soluciones necesarias al análisis espectróscopico de impedancia. El sistema basado en este integrado es una de las tareas de este proyecto.
+
+El presente proyecto enmarca la tesis doctoral del Ing. Dell’Osa.
+
 \vspace{25px}
 
-\begin{figure}[htpb]
+\begin{figure}[H]
 \centering 
-\includegraphics[width=.7\textwidth]{./Figuras/diagBloques_borrador.png}
-\caption{Diagrama en bloques del sistema -BORRADOR-}
+\includegraphics[width=.7\textwidth]{./Figuras/diagBloques_def.png}
+\caption{Diagrama en bloques del sistema}
 \label{fig:diagBloques_borrador}
 \end{figure}
 
 \vspace{25px}
-
-El circuito integrado AD5933 (Analog Devices, USA) tiene en sí mismo implementadas las soluciones necesarias al análisis espectróscopico de impedancia, en la Figura \ref{fig:ad5933} se observa su diagrama en bloques interno. El sistema basado en este integrado es una de las tareas de este proyecto.
-
-\vspace{25px}
-
-\begin{figure}[htpb]
-\centering 
-\includegraphics[width=.7\textwidth]{./Figuras/ad5933.png}
-\caption{Diagrama en bloques del AD5933 -BORRADOR(agrandar tamaño de la tipografía)}
-\label{fig:ad5933}
-\end{figure}
-
-\vspace{25px}
-
-El presente proyecto enmarca la tesis doctoral del Ing. Dell’Osa.
 \end{consigna}
 
 
@@ -154,24 +143,25 @@ El presente proyecto enmarca la tesis doctoral del Ing. Dell’Osa.
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
 %\label{tab:interesados}
-\begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
+\begin{tabularx}{\linewidth}{@{}|X|X|X|X|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   & \clientename      &\empclientename	& Secretario de Ciencia y Tecnología \\ \hline
-Cliente       & \clientename      &\empclientename	& Secretario de Ciencia y Tecnología \\ \hline
+Auspiciante y cliente  & \clientename      &\empclientename	& Secretario de Ciencia y Tecnología \\ \hline
 Responsable   & \authorname       & \empclientename	& Alumno 	\\ \hline
-Colaboradores & Ing. Agustín Mailing \newline Lic. Fernando Silva \newline Dr. Alejandro Masner &              Independiente-FIUBA \newline Independiente \newline  \newline Universidad de la República (Uruguay)	& - \newline Ref: Clinico \newline - 	\\ \hline
+Colaboradores & Ing. Agustín Mailing \newline \newline Lic. Fernando Silva \newline Dr.Alejandro Masner &              Independiente-FIUBA \newline Independiente \newline Universidad de la República (Uruguay)	& - \newline \newline Ref: Clínico \newline - 	\\ \hline
 Equipo        & Dr. Diego Dondo \newline Lic. Guillermo Prisching & FRC-UTN \newline \empclientename & Ref: Electrónica \newline Ref: Software \\ \hline
 \end{tabularx}
 \end{table}
 
-\textbf{En la última columna de la tabla no funciona el comando newline }
+
+
+
+
 
 \begin{itemize}
-\item Auspiciante: está condicionado por la situación presupuestaria de la Universidad a causa de la actual Pandemia que condiciona la economía Nacional. La rendición de gastos se rige por la Ordenanda 5 del Consejo Superior de la \empclientename. Se cuenta con él y el trabajo de la directora de Ciencia y Tecnología y encargo de la Unidad de Vinculación Tecnológica.
-\item Cliente: La rendición final del proyecto será evaluada sólo por el informe final que se debe presentar y la consecuente rendición de gastos.
-\item Equipo: Diego Dondo, tiene actividad docente durante los dos cuatrimestres y su disponibilidad puede condicionarse temporalmente por sus laborales en su universidad de origen. Guillermo Prisching es su primera interacción con un proyecto con el equipo y colaboradores, a priori, sus referencias hablan de compromiso y responsabilidad.
+\item Auspiciante y cliente: está condicionado por la situación presupuestaria de la Universidad a causa de la actual pandemia que condiciona la economía Nacional. La rendición de gastos se rige por la Ordenanda 5 del Consejo Superior de la \empclientename. Se cuenta con él y el trabajo de la directora de Ciencia y Tecnología y encargo de la Unidad de Vinculación Tecnológica. La rendición final del proyecto será evaluada sólo por el informe final que se debe presentar y la consecuente rendición de gastos.
+\item Equipo: Diego Dondo tiene actividad docente durante los dos cuatrimestres y su disponibilidad puede condicionarse temporalmente por sus laborales en su universidad de origen. Guillermo Prisching es su primera interacción con un proyecto con el equipo y colaboradores, a priori, sus referencias hablan de compromiso y responsabilidad.
 \item Colaboradores: Agustín Mailing tiene mucho compromiso y disponibilidad pero se encuentra condicionado con su condición de trabajador independiente/autónomo. Fernando Silva es kinesiologo y el aporte clínico del proyecto, puede condicionarse su aporte por el actual contexto de Pandemia y Emergencia Sanitaria.
 
 \end{itemize}
@@ -211,11 +201,11 @@ El presente proyecto no incluye la construcción de electrodos aplicables al ser
 Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
-\item se cuenta con la aprobación de la Secretaría de Ciencia y Tecnología de Universidad Nacional de Tierra del Fuego, Antártida e Islas del Atlántico Sur (UNTDF) de la propuesta presentada a la convocatoria Proyectos de Investigación y Desarrollo de la UNTDF 2019 (PIDUNTDF2019) denominada ``Detección de lesiones óseas por medio de Bioimpedancia: Pruebas clínicas, portabilidad y comercialización'' y el consecuente financiamiento que la adjudicación de dicha convocatoria conlleva;
-\item la legislación actualmente vigente en la República Argentina relacionada a las compras de componentes electrónicos en el extranjero no sufrirá cambios;
-\item el valor del dolar americano no será superior a los 85 pesos argentinos, como también que los gastos realizados desde proyectos de investigación que se desarrollan en universidades nacionales argentinas no perciben el impuesto PAIS;
-\item ninguno de los referentes de cada una de las áreas desertará del presente proyecto sin un previo reemplazo;
-\item ningún factor externo a la realidad del presente desarrollo condicione el funcionamiento de los Comités de Bioética Hospitalaria de las instituciones sanitarias de la República Argentina, como podrían ser pandemias, catástrofes, entre otras.
+\item Se cuenta con la aprobación de la Secretaría de Ciencia y Tecnología de Universidad Nacional de Tierra del Fuego, Antártida e Islas del Atlántico Sur (UNTDF) de la propuesta presentada a la convocatoria Proyectos de Investigación y Desarrollo de la UNTDF 2019 (PIDUNTDF2019) denominada ``Detección de lesiones óseas por medio de Bioimpedancia: Pruebas clínicas, portabilidad y comercialización'' y el consecuente financiamiento que la adjudicación de dicha convocatoria conlleva;
+\item La legislación actualmente vigente en la República Argentina relacionada a las compras de componentes electrónicos en el extranjero no sufrirá cambios;
+\item El valor del dolar americano no será superior a los 85 pesos argentinos, como también que los gastos realizados desde proyectos de investigación que se desarrollan en universidades nacionales argentinas no perciben el impuesto PAIS;
+\item Ninguno de los referentes de cada una de las áreas desertará del presente proyecto sin un previo reemplazo;
+\item Ningún factor externo a la realidad del presente desarrollo condicione el funcionamiento de los Comités de Bioética Hospitalaria de las instituciones sanitarias de la República Argentina, como podrían ser pandemias, catástrofes, entre otras.
 
 \end{itemize}
 \end{consigna}
@@ -249,9 +239,11 @@ Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
 \end{enumerate}
 \end{consigna}
 
+\section{Historias de usuarios (\textit{Product backlog})}
+\label{sec:backlog}
+
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
-
 \begin{consigna}{black}
 \begin{itemize}
 \item Dispositivo funcionando
