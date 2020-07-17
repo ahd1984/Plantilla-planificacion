@@ -14,8 +14,8 @@
 \autor{Antonio H. Dell'Osa} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Nombre del Director}
-\pertenenciaDirector{pertenencia} 
+\director{Antonio H. Dell'Osa}
+\pertenenciaDirector{IDEI/UNTDF} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{} % si queda vacio no se deberíá incluir 
 \pertenenciaCoDirector{}
@@ -25,12 +25,12 @@
 \empresaCliente{Universidad Nacional de Tierra del Fuego}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
-\juradoUno{Nombre y Apellido (1)}
-\pertenenciaJurUno{pertenencia (1)} 
-\juradoDos{Nombre y Apellido (2)}
-\pertenenciaJurDos{pertenencia (2)}
-\juradoTres{Nombre y Apellido (3)}
-\pertenenciaJurTres{pertenencia (3)}
+\juradoUno{Evaluador anónimo}
+\pertenenciaJurUno{Determinado por la SCyT-UNTDF} 
+\juradoDos{Evaluador anónimo}
+\pertenenciaJurDos{Determinado por la SCyT-UNTDF}
+\juradoTres{Evaluador anónimo}
+\pertenenciaJurTres{Determinado por la SCyT-UNTDF}
  
 \fechaINICIO{22 de junio de 2020}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlanificacion{22 de Agosto de 2020} 	%Fecha de final de cursada de GdP
@@ -64,11 +64,9 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 1.0      & Creación del documento                                                          & 22/06/2020 \\ \hline
-1.1      & Ejemplo de un texto muy largo que debiera ocupar más de una línea para que tengan de ejemplo                                                                                																						   & dd/mm/aaaa \\ \hline
-1.2      & Otro ejemplo \newline
-		   Con texto partido \newline
-		   En varias líneas \newline
-		   A propósito                                                                     & dd/mm/aaaa \\ \hline
+1.1.1      & Primera entrega (2 $\rightarrow$ 3) para ser revisada (Faltantes: Requerimientos y WBS) & 10/07/2020 \\ \hline
+1.1.2      & Segunda entrega (2 $\rightarrow$ 3) completa para ser revisada  & 17/07/2020 \\ \hline
+
 \end{tabularx}
 \end{table}
 
@@ -97,8 +95,8 @@ Se adjunta a esta acta la planificación inicial.
 \begin{tabular}{ccc}
 \begin{tabular}[c]{@{}c@{}}Ariel Lutenberg \\ Director posgrado FIUBA\end{tabular} &  & \begin{tabular}[c]{@{}c@{}}\clientename \\ \empclientename \end{tabular} \vspace{2.5cm} \\ 
 \multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \supname \\ Director del Trabajo Final\end{tabular}} \vspace{2.5cm} \\
-\begin{tabular}[c]{@{}c@{}}\jurunoname \\ Jurado del Trabajo Final\end{tabular}     &  & \begin{tabular}[c]{@{}c@{}}\jurdosname\\ Jurado del Trabajo Final\end{tabular}  \vspace{2.5cm}  \\
-\multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \jurtresname\\ Jurado del Trabajo Final\end{tabular}} \vspace{.5cm}                                                                     
+%\begin{tabular}[c]{@{}c@{}}\jurunoname \\ Jurado del Trabajo Final\end{tabular}     &  & \begin{tabular}[c]{@{}c@{}}\jurdosname\\ Jurado del Trabajo Final\end{tabular}  \vspace{2.5cm}  \\
+%\multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \jurtresname\\ Jurado del Trabajo Final\end{tabular}} \vspace{.5cm}                                                                     
 \end{tabular}
 \end{table}
 
@@ -134,6 +132,7 @@ El presente proyecto enmarca la tesis doctoral del Ing. Dell’Osa.
 \vspace{25px}
 \end{consigna}
 
+\pagebreak
 
 \section{Identificación y análisis de los interesados}
 \label{sec:interesados}
@@ -168,7 +167,7 @@ Equipo        & Dr. Diego Dondo \newline Lic. Guillermo Prisching & FRC-UTN \new
 
 \end{consigna}
 
-
+\pagebreak
 
 \section{1. Propósito del proyecto}
 \label{sec:proposito}
@@ -179,6 +178,8 @@ A su vez, permite continuar con expansión de aplicaciones biomédicas basadas e
 Fundándose las razones del desarrollo de este proyecto tanto en la implementación de una nueva técnica diagnóstica con ventajas parciales sobre las existentes y una tecnología médica con un menor impacto al medio ambiente que las actuales.
 
 \end{consigna}
+
+\pagebreak
 
 \section{2. Alcance del proyecto}
 \label{sec:alcance}
@@ -193,6 +194,7 @@ La interfaz con el usuario se dará por una aplicación ejecutable en SmartPhone
 El presente proyecto no incluye la construcción de electrodos aplicables al ser humano a examinar y de cables intermediarios entre dispositivo y el paciente. Se utilizarán electrodos adhesivos descartables y cables intermediarios de electrocardiografía (con aprobación de la Administración Nacional de Medicamentos, Alimentos y Tecnología Médica). Tampoco incluye el desarrollo de un software que permita el análisis de datos de bioimpedancia adquiridos.
 \end{consigna}
 
+\pagebreak
 
 \section{3. Supuestos del proyecto}
 \label{sec:supuestos}
@@ -210,41 +212,55 @@ Para el desarrollo del presente proyecto se supone que:
 \end{itemize}
 \end{consigna}
 
+\pagebreak
+
 \section{4. Requerimientos}
 \label{sec:requerimientos}
 
 \begin{consigna}{black}
-Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
-
 \begin{enumerate}
 \item Grupo de requerimientos asociados con la normativa vigente
 	\begin{enumerate}
-	\item Cumplimiento de la IRAM 4220-1 (Seguridad eléctrica de equipamiento médico)
+	\item Se debe cumplir con la normativa IRAM 4220-1 (Seguridad eléctrica de equipamiento médico)
+	\item Se debe cumplir con la normativa de Principios Éticos para las investigaciones médicas en seres humanos
 	\end{enumerate}
+
 \item Grupo de requerimientos asociados con adquisición de datos
 	\begin{enumerate}
-	\item Configuración de electrodos bipolar.
-	\item Resolución de la medición en orden de los 10 ohmios.
+	\item Se debe contar con tres pares de electrodos aplicables de forma no invisiva para configuración de electrodos bipolar y selección por interruptor manual.
+	\item Se debe poseer una resolución de la medición en orden de los 10 ohmios.
+	\item No se debe configurar el rango de frecuencias de señales aplicables (será fijo entre 5kHz y 100kHz).
 	\end{enumerate}
+
 \item Grupo de requerimientos asociados con la interfaz con el usuario
 	\begin{enumerate}
-	\item Visualización del módulo de la bioimpedancia en el dominio de la frecuencia en gráfico XY.
-	\item Visualización de los valores numéricos de módulo de bioimpedancia para cada frecuencia.
+	\item Se debe contar con la visualización del módulo de la bioimpedancia en el dominio de la frecuencia en gráfico XY.
+	\item Se debe contar con la visualización de los valores numéricos de módulo de bioimpedancia para cada frecuencia.
+	\item Se debe poder descargar de los datos medidos en un archivo formato .CSV (o similar) en una memoria extraíble (tipo microSD).
 	\end{enumerate}
-\item Grupo de requerimientos asociados con suministro eléctrico
+
+\item Grupo de requerimientos asociados con portabilidad
 	\begin{enumerate}
-	\item El dispositivo debe tener una autonomía a baterías de al menos 2 horas y conector USB para la carga de la bateria.
+	\item Se debe contar con una autonomía a baterías de al menos 2 horas y conector USB para la carga de la bateria.
+	\item No se deben exceder las dimensiones físicas externas de 15 centímetros de largo, 8 centímetros de ancho y 3 centímetros de espesor.
+	\item Se debe contar con la disipación térmica conveniente para que la carcasa externa no genere una temperatura perceptible por el usuario.
+	\item Se debe contar con conectividad inálambrica (wifi y/o Bluetooth) a un dispositivo smartphone, tablet o PC-notebook.
 	\end{enumerate}
 	
 \end{enumerate}
 \end{consigna}
 
+\pagebreak
+
 \section{Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
+
+\pagebreak
 
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
 \begin{consigna}{black}
+Una vez finalizado el presente proyecto se entregará:
 \begin{itemize}
 \item Dispositivo funcionando
 \item Manual de uso
@@ -255,40 +271,84 @@ Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
 
 \end{consigna}
 
+\pagebreak
+
 \section{6. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-Se recomienda mostrar el WBS mediante una lista indexada:
+\begin{consigna}{black}
 
 \begin{enumerate}
-\item Grupo de tareas 1
+\item Gestión general de proyecto (167 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+	\item Fase de Inicio del proyecto (12 hs)
+	\item Definición de Alcance  (20 hs)
+	\item Estudio de la normativa IRAM 4220-1 (40 hrs)
+	\item Compras y adquisiciones (40 hs)
+	\item Rendición de compras y adquisiciones (20 hs)
+	\item Escritura del informe final (15 hs)
+	\item Elaboración de manual de uso (20 hs)
 	\end{enumerate}
-\item Grupo de tareas 2
+
+\item Sistema basado en AD5933 (85 hrs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+	\item Diseño del sistema (40 hs)
+	\item Elaboración de la placa del circuito impreso (30 hs)
+	\item Ensamble y soldado de la placa del sistema y electrodos aplicables (15 hs)
 	\end{enumerate}
-	\item Grupo de tareas 3
+
+\item Software de control y comunicación basado en Raspberry Pi 4 (125 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
-	\item Tarea 4 (tantas hs)
-	\item Tarea 5 (tantas hs)
+	\item Diagramación de la arquitectura (30 hs)
+	\item Desarrollo del firmware de comunicación inalámbrica con dispositivo móvil (25 hs)
+	\item Desarrollo del firmware de comunicación con sistema AD5933 (20 hs)
+	\item Desarrollo del firmware de control (30 hs)
+	\item Pruebas de funcionamiento (20 hs)
 	\end{enumerate}
+
+\item Sistema autonomía energética (48 hs)
+ 	\begin{enumerate}
+ 	\item Análisis y elección de batería (8 hs)
+ 	\item Diseño de circuito de carga (8 hs)
+ 	\item Implementación de circuito de carga (12 hs)
+ 	\item Diseño de circuito de regulación (8 hs)
+ 	\item Implementación de circuito de regulación (12 hs)
+ 	\end{enumerate}
+
+
+\item Software de interfaz con el usuario (52 hs) 
+	\begin{enumerate}
+	\item Diagramación de la interfaz (diseño y estructura) (12 hs)
+	\item Desarrollo de software (25 hs)
+	\item Pruebas de funcionamiento (15 hs)
+	\end{enumerate}
+
+\item Protocolo de medición y Consentimiento informado (CI) (96 hrs)
+	\begin{enumerate}
+	\item Escritura del Protocolo de Medición (4 hs)
+	\item Escritura del CI (4 hs)
+	\item Primer Envío del protocolo y el CI a comité de bioética externos (CBE) para su revisión (40 hs)
+	\item Corrección del protocolo y CI a partir de la devolución del CBE (8 hs)
+	\item Segundo Envío del protocolo y el CI a CBE para su aprobación definitiva (40 hs)
+	\end{enumerate}
+
+\item Ensayos de funcionamiento del dispositivo (75 hs)
+	\begin{enumerate}
+	\item Mediciones sobre circuitos de componentes pasivos R-C (2 hs)
+	\item Análisis de mediciones en circuito R-C (2 hs)
+	\item Mediciones sobre sistemas biológicos ex-vivo (3 hs)
+	\item Análisis de mediciones en sistemas biológicos ex-vivo (3 hs)
+	\item Mediciones sobre voluntarios humanos (40 hs)
+	\item Análisis de mediciones sobre seres humanos (25 hs)
+	\end{enumerate}
+	
 \end{enumerate}
 
-Cantidad total de horas: (tantas hs)
-
-Se recomienda que no haya ninguna tarea que lleve más de 40 hs. 
+Cantidad total de horas: 648.
 
 \end{consigna}
+
+\pagebreak
 
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
